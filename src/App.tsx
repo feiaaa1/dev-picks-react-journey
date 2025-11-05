@@ -1,20 +1,26 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import ResourceList from "./components/ResourceList";
 
 function App() {
 	const [count, setCount] = useState(0);
 
+	const initialResources = [
+		{ id: 1, title: "React Docs", url: "react.dev" },
+		{ id: 2, title: "TypeScript Docs", url: "typescriptlang.org" },
+		{
+			id: 3,
+			title: "Tailwind Docs",
+			url: "tailwindcss.com",
+		},
+		{ id: 4, title: "Vite Docs", url: "vitejs.dev" },
+		{ id: 5, title: "React Docs", url: "react.dev" },
+	];
+
 	return (
 		<>
 			<div>
-				<a href="https://vite.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
+				<ResourceList initialResources={initialResources} />
 			</div>
 			<h1 className="text-amber-300">Vite + React</h1>
 			<div className="card">
