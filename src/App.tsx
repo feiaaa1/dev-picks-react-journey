@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import ResourceList from "./components/ResourceList";
+import ResourceListWithFilters from "./components/ResourceListWithFilters";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -9,6 +10,7 @@ function App() {
 		<>
 			<div>
 				<ResourceList />
+				<ResourceListWithFilters />
 			</div>
 			<h1 className="text-amber-300">Vite + React</h1>
 			<div className="card">
